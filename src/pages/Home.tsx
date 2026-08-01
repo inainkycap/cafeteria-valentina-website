@@ -7,13 +7,16 @@ function Home() {
       {/* Hero: photo + name on the left, general info on the right. The photo
           side always stretches to match the info side's full height, so it
           reaches the bottom of the page no matter how tall the content is. */}
-      <section className="flex flex-col md:min-h-screen md:flex-row">
+      <section className="flex flex-col md:min-h-screen md:flex-row md:items-stretch">
         {/* Left: storefront photo with name overlaid at the bottom */}
-        <div className="relative flex h-80 items-center justify-center border-b-2 border-dashed border-olive-wood/50 bg-olive-wood/10 md:h-auto md:w-1/2 md:border-r-2 md:border-b-0">
-          <span className="px-4 text-center text-sm text-olive-wood">
-            [ FOTO DEL LOCAL — MARCADOR DE POSICIÓN ]
-          </span>
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-graphite/90 via-graphite/50 to-transparent px-6 pt-24 pb-8 text-center">
+        <div className="relative h-80 w-full overflow-hidden md:h-auto md:w-1/2">
+          <img
+            src="/images/storefront.jpg"
+            alt="Cafetería Valentina"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-graphite/90 via-graphite/40 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 px-6 pb-8 pt-24 text-center">
             <h1 className="font-display text-4xl font-semibold tracking-tight text-antique-white sm:text-5xl">
               Cafetería Valentina
             </h1>
