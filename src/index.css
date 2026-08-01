@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+@theme {
+  --color-antique-white: #f8ebdb;
+  --color-graphite: #36322f;
+  --color-dim-gray: #636862;
+  --color-olive-wood: #8a6f53;
+  --color-sandy-clay: #dbac7a;
+
+  --font-display: "Playfair Display", serif;
+  --font-body: "Nunito Sans", sans-serif;
+}
+
+body {
+  @apply bg-antique-white text-graphite font-body;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
