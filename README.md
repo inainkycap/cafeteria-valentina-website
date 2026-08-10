@@ -20,7 +20,7 @@ npm run dev
 ## Milestones
 
 1. **Setup React project** — Vite + React + Tailwind (done)
-2. **Setup Vercel** — connect this repo to Vercel for deployment
+2. **Setup Vercel** — connect this repo to Vercel for deployment (done)
 3. **Setup SuperIntern SDK** — add an AI agent to the site 
    ([dashboard](https://test-app.superintern.ai/dashboard/api_messages))
 
