@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
-import PhotoScroller from '../components/PhotoScroller'
+import PlaceholderBlock from '../components/PlaceholderBlock'
+
+const galleryItems = [1, 2, 3, 4, 5, 6, 7, 8]
 
 function Home() {
   return (
@@ -23,7 +25,7 @@ function Home() {
           </div>
         </div>
 
-        {/* Right: CTA, general info, and scrolling photos on antique-white */}
+        {/* Right: CTA, general info, and photo gallery on antique-white */}
         <div className="flex flex-col justify-center gap-10 bg-antique-white px-6 py-12 sm:px-12 md:w-1/2 md:py-16">
           <div className="text-center md:text-left">
             <Link
@@ -79,8 +81,22 @@ function Home() {
             </div>
           </div>
 
-          {/* Scrolling photos, no heading */}
-          <PhotoScroller />
+          <div className="space-y-3">
+            <div className="grid grid-cols-2 gap-2 md:grid-cols-3 xl:grid-cols-4">
+              {galleryItems.map((item) => (
+                <div key={item} className="aspect-[4/3] overflow-hidden rounded-md">
+                  {/*
+                    Replace these placeholder blocks with real imports from
+                    src/assets/gallery/ once the final photos are ready.
+                    Example:
+                    import photoOne from '../assets/gallery/photo-one.jpg'
+                    Then swap the PlaceholderBlock below for <img src={photoOne} ... />
+                  */}
+                  <PlaceholderBlock label="[FOTO]" className="h-full w-full" />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
     </div>
